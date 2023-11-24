@@ -49,13 +49,18 @@ export function makeSceduleFirstTwoHours(employees) {
         
                 const placeElement = document.querySelector(`.${name}`);
                 const parentElement = placeElement.parentNode;
-                console.log(parentElement)
                 
-                employee.lhFsbOkies.push(`${getDayOfWeek()} 6-30/8-30`)  
+                const currentPosition = {
+                    time: `${getDayOfWeek()} 6-30/8-30`,
+                    station: parentElement.dataset.name,
+                }
+                
+                employee.stations.push(currentPosition)  
+                
             }
         })
     }
-    console.log(employees)
+    
 }
 
 function getRandomNumber() {
