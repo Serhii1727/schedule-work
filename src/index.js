@@ -6,17 +6,21 @@ import makeScheduleThirdTwoHours from "./js/make-schedue/make-schedule-third";
 import makeScheduleFourthTwoHours from "./js/make-schedue/make-schedule-fourth";
 import { renderDayOfWeek } from "./js/change-day";
 import { optionsButton } from "./js/button";
+import checkLocalStorage from "./js/local-storage";
 
 refs.buttonMakeSchedule.addEventListener('click', () => {
     
     if (optionsButton.counter === 1) {
         makeSceduleFirstTwoHours(employees);
         optionsButton.counter += 1;
+        localStorage.setItem('button-counter', JSON.stringify(optionsButton))
         return;
     };
 
     if (optionsButton.counter === 2) {
-        makeScheduleSecondTwoHours(employees);
+        const data = checkLocalStorage()
+        console.log("data", data)
+        makeScheduleSecondTwoHours(data);
         optionsButton.counter += 1; 
         return;
     };
@@ -33,6 +37,7 @@ refs.buttonMakeSchedule.addEventListener('click', () => {
     
 });
 
+checkLocalStorage()
 renderDayOfWeek();
 
 

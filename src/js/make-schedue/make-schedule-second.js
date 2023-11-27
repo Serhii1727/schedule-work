@@ -2,6 +2,8 @@ import { refs } from "../refs";
 import { getDayOfWeek } from "../change-day";
 
 function makeScheduleSecondTwoHours(employees) {
+
+    console.log('employyes', employees)
     
     for (let i = 0; i < employees.length; i += 1) {
         const nameLastStation = employees[i].stations[0].station;

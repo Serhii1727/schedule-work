@@ -59,6 +59,8 @@ export function makeSceduleFirstTwoHours(employees) {
                 
             }
         })
+
+        localStorage.setItem('first', JSON.stringify(employees));
     }
     
 }
