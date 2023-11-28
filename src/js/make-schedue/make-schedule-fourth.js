@@ -1,7 +1,7 @@
 import { refs } from "../refs";
 import { getDayOfWeek } from "../change-day";
 
-function makeScheduleFourthTwoHours(employees) {console.log(employees)
+function makeScheduleFourthTwoHours(employees) {
     for (let i = 0; i < employees.length; i += 1) {
     const nameLastStation = employees[i].stations[2].station;
     if (nameLastStation === "rh-cushion-install") {
@@ -79,6 +79,7 @@ function makeScheduleFourthTwoHours(employees) {console.log(employees)
     }
 
     localStorage.setItem('fourth', JSON.stringify(employees));
+
     
 }
 

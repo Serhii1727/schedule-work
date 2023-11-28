@@ -9,6 +9,7 @@ function makeSceduleFirstTwoHours(employees) {
         .sort((firstEmployee, secondEmployee) => { return firstEmployee.number - secondEmployee.number })
         .map(({ name }) => { return name });
     
+    
     refs.trLhFsbOkies.querySelector('[data-first]').textContent = arrayRandomEmloyees[0];
     refs.trLhFsbOkies.querySelector('[data-first]').classList.add(arrayRandomEmloyees[0])
 
@@ -50,6 +51,7 @@ function makeSceduleFirstTwoHours(employees) {
                 const placeElement = document.querySelector(`.${name}`);
                 const parentElement = placeElement.parentNode;
                 
+                
                 const currentPosition = {
                     time: `${getDayOfWeek()} 6-30/8-30`,
                     station: parentElement.dataset.name,
@@ -60,8 +62,10 @@ function makeSceduleFirstTwoHours(employees) {
             }
         })
 
-        localStorage.setItem('first', JSON.stringify(employees));
+        
     }
+
+    localStorage.setItem('first', JSON.stringify(employees));
     
 }
 

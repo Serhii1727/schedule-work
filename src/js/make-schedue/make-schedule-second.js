@@ -7,6 +7,7 @@ function makeScheduleSecondTwoHours(employees) {
     
     for (let i = 0; i < employees.length; i += 1) {
         const nameLastStation = employees[i].stations[0].station;
+        
         delete employees[i].number;
         
         if (nameLastStation === "lh-fsb-okies") {

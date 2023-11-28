@@ -79,7 +79,6 @@ function makeScheduleThirdTwoHours(employees) {
         };
     }
 
-    console.log(employees);
 
     localStorage.setItem('third', JSON.stringify(employees));
 }

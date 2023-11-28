@@ -15,6 +15,7 @@ refs.buttonMakeSchedule.addEventListener('click', () => {
     
     if (optionsButton.counter === 1) {
         makeSceduleFirstTwoHours(employees);
+        console.log(employees)
         optionsButton.counter += 1;
         localStorage.setItem('button-counter', JSON.stringify(optionsButton))
         return;
@@ -40,6 +41,39 @@ refs.buttonMakeSchedule.addEventListener('click', () => {
         optionsButton.counter = 1;
         localStorage.setItem(`${getDayOfWeek()}`, JSON.stringify(getDataLocalStorageFourth()))
         localStorage.setItem('button-counter', JSON.stringify(optionsButton))
+        employees.forEach(employee => {
+            delete employee.number
+            employee.stations = []
+            
+    refs.trLhFsbOkies.querySelector('[data-first]').classList.remove(employee.name)
+
+    
+    refs.trLhFsbRollOverSteam.querySelector('[data-first]').classList.remove(employee.name);
+
+    
+    refs.trRhFsbOkies.querySelector('[data-first]').classList.remove(employee.name)
+    
+    
+    refs.trRhFsbRollOverSteam.querySelector('[data-first]').classList.remove(employee.name);
+
+    
+    refs.trLhFscOkies.querySelector('[data-first]').classList.remove(employee.name);
+
+    
+    refs.trLhFscRollOverSteam.querySelector('[data-first]').classList.remove(employee.name);
+
+    
+    refs.trRhFscOkies.querySelector('[data-first]').classList.remove(employee.name);
+
+    
+    refs.trRhFscRollOverSteam.querySelector('[data-first]').classList.remove(employee.name);
+
+    
+    refs.trLhCushionInstall.querySelector('[data-first]').classList.remove(employee.name)
+
+    
+    refs.trRhCushionInstall.querySelector('[data-first]').classList.remove(employee.name)
+        })
         return;
     };
     
@@ -51,6 +85,6 @@ checkLocalStorageFirst();
 checkLocalStorageSecond();
 checkLocalStorageThird();
 checkLocalStorageFourth();
-clearHtmlTableLocalStorage();
+
 
 
