@@ -15,10 +15,9 @@ export function getDayOfWeek() {
     const numberOfDay = date.getDay();
     
     return days[numberOfDay];
-}
+};
 
 export function renderDayOfWeek() {
-    const day = getDayOfWeek()
-    const renderMarkup = `<p>${day}</p>`;
-    refs.section.insertAdjacentHTML('beforeend', renderMarkup)
-}
+    const day = getDayOfWeek();
+    refs.pDay.textContent = `${day}`;
+};

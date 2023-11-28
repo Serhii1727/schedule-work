@@ -1,5 +1,6 @@
 export const refs = {
     buttonMakeSchedule: document.querySelector('[data-make-schedule]'),
+    buttonClearSchedule: document.querySelector('[data-clear-schedule]'),
     trLhFsbOkies: document.querySelector('[data-name="lh-fsb-okies"]'),
     trLhFsbRollOverSteam: document.querySelector('[data-name="lh-fsb-roll-over-steam"]'),
     trRhFsbOkies: document.querySelector('[data-name="rh-fsb-okies"]'),
@@ -11,5 +12,8 @@ export const refs = {
     trLhCushionInstall: document.querySelector('[data-name="lh-cushion-install"]'),
     trRhCushionInstall: document.querySelector('[data-name="rh-cushion-install"]'),
     section: document.querySelector('.section-day'),
+    pDay: document.querySelector('[data-name="day"]')
 }
+
+
 

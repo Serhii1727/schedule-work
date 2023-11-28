@@ -17,7 +17,7 @@ function makeSceduleFirstTwoHours(employees) {
 
     refs.trRhFsbOkies.querySelector('[data-first]').textContent = arrayRandomEmloyees[2];
     refs.trRhFsbOkies.querySelector('[data-first]').classList.add(arrayRandomEmloyees[2])
-
+    
     refs.trRhFsbRollOverSteam.querySelector('[data-first]').textContent = arrayRandomEmloyees[3];
     refs.trRhFsbRollOverSteam.querySelector('[data-first]').classList.add(arrayRandomEmloyees[3]);
 

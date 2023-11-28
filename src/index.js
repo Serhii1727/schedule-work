@@ -6,7 +6,10 @@ import makeScheduleThirdTwoHours from "./js/make-schedue/make-schedule-third";
 import makeScheduleFourthTwoHours from "./js/make-schedue/make-schedule-fourth";
 import { getDayOfWeek, renderDayOfWeek } from "./js/change-day";
 import { optionsButton } from "./js/button";
-import {checkLocalStorageFirst, getDataLocalStorageFirst, checkLocalStorageSecond, getDataLocalStorageSecond, checkLocalStorageThird, getDataLocalStorageThird, checkLocalStorageFourth, getDataLocalStorageFourth} from './js/local-storage'
+import { checkLocalStorageFirst, getDataLocalStorageFirst, checkLocalStorageSecond, getDataLocalStorageSecond, checkLocalStorageThird, getDataLocalStorageThird, checkLocalStorageFourth, getDataLocalStorageFourth } from './js/local-storage';
+import clearHtmlTableLocalStorage from "./js/clear-html";
+
+renderDayOfWeek();
 
 refs.buttonMakeSchedule.addEventListener('click', () => {
     
@@ -42,12 +45,12 @@ refs.buttonMakeSchedule.addEventListener('click', () => {
     
 });
 
+refs.buttonClearSchedule.addEventListener('click', clearHtmlTableLocalStorage)
+
 checkLocalStorageFirst();
 checkLocalStorageSecond();
 checkLocalStorageThird();
 checkLocalStorageFourth();
-
-
-renderDayOfWeek();
+clearHtmlTableLocalStorage();
 
 
