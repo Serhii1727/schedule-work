@@ -1,7 +1,7 @@
 import { refs } from "../refs";
 import { getDayOfWeek } from "../change-day";
 
-export function makeSceduleFirstTwoHours(employees) {
+function makeSceduleFirstTwoHours(employees) {
     const arrayRandomEmloyees = [...employees].map((employee) => {
         employee.number = getRandomNumber();
         return employee;
@@ -68,3 +68,5 @@ export function makeSceduleFirstTwoHours(employees) {
 function getRandomNumber() {
     return Number((Math.random() * 10).toFixed(4)) 
 }
+
+export default makeSceduleFirstTwoHours;

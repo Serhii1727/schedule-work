@@ -3,10 +3,11 @@ import { getDayOfWeek } from "../change-day";
 
 function makeScheduleSecondTwoHours(employees) {
 
-    console.log('employyes', employees)
+    
     
     for (let i = 0; i < employees.length; i += 1) {
         const nameLastStation = employees[i].stations[0].station;
+        delete employees[i].number;
         
         if (nameLastStation === "lh-fsb-okies") {
             refs.trLhFsbRollOverSteam.querySelector('[data-second]').textContent = employees[i].name;
@@ -80,6 +81,8 @@ function makeScheduleSecondTwoHours(employees) {
                 });
         };
     }
+
+    localStorage.setItem('second', JSON.stringify(employees));
 }
 
 export default makeScheduleSecondTwoHours;

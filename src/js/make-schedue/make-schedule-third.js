@@ -78,6 +78,10 @@ function makeScheduleThirdTwoHours(employees) {
                 });
         };
     }
+
+    console.log(employees);
+
+    localStorage.setItem('third', JSON.stringify(employees));
 }
 
 export default makeScheduleThirdTwoHours;

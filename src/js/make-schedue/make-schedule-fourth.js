@@ -44,7 +44,7 @@ function makeScheduleFourthTwoHours(employees) {console.log(employees)
             refs.trRhFsbOkies.querySelector('[data-fourth]').textContent = employees[i].name;
             employees[i].stations.push({
                     time: `${getDayOfWeek()} 13-10/14-30`,
-                    station: "rh-fsc-okies",
+                    station: "rh-fsb-okies",
                 });
         };
         if (nameLastStation === "rh-fsc-okies") {
@@ -77,6 +77,8 @@ function makeScheduleFourthTwoHours(employees) {console.log(employees)
                 });
         };
     }
+
+    localStorage.setItem('fourth', JSON.stringify(employees));
     
 }
 
