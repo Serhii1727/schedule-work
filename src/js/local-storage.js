@@ -3,7 +3,6 @@ import OptionsButton from "./button";
 
 export const newOptionButton = new OptionsButton()
 
-
 export function checkLocalStorageFirst() {
     const dataLocalStorageFirst = JSON.parse(localStorage.getItem('first'));
     const dataButtonOptions = JSON.parse(localStorage.getItem('button-counter'));
@@ -69,14 +68,6 @@ export function checkLocalStorageFirst() {
     }
 };
 
-export function getDataLocalStorageFirst() {
-    const dataLocalStorageFirst = JSON.parse(localStorage.getItem('first'));
-    if (dataLocalStorageFirst) {
-        return dataLocalStorageFirst;
-    }
-    
-};
-
 export function checkLocalStorageSecond() {
     const dataLocalStorageSecond = JSON.parse(localStorage.getItem('second'));
     const dataButtonOptions = JSON.parse(localStorage.getItem('button-counter'));
@@ -137,14 +128,6 @@ export function checkLocalStorageSecond() {
         
     
     }
-};
-
-export function getDataLocalStorageSecond() {
-    const dataLocalStorageSecond = JSON.parse(localStorage.getItem('second'));
-    if (dataLocalStorageSecond) {
-        return dataLocalStorageSecond;
-    }
-    
 };
 
 export function checkLocalStorageThird() {
@@ -211,14 +194,6 @@ export function checkLocalStorageThird() {
     }
 };
 
-export function getDataLocalStorageThird() {
-    const dataLocalStorageThird = JSON.parse(localStorage.getItem('third'));
-    if (dataLocalStorageThird) {
-        return dataLocalStorageThird;
-    }
-    
-};
-
 export function checkLocalStorageFourth() {
     const dataLocalStorageFourth = JSON.parse(localStorage.getItem('fourth'));
     const dataButtonOptions = JSON.parse(localStorage.getItem('button-counter'));
@@ -283,11 +258,5 @@ export function checkLocalStorageFourth() {
     }
 };
 
-export function getDataLocalStorageFourth() {
-    const dataLocalStorageFourth = JSON.parse(localStorage.getItem('fourth'));
-    if (dataLocalStorageFourth) {
-        return dataLocalStorageFourth;
-    }
-    
-};
+
 

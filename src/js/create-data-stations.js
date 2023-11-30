@@ -70,26 +70,8 @@ function createDataStationsToEmployees(dataEmploees) {
             }
 
             localStorage.setItem(`${getDayOfWeek()}-dataEmployees`, JSON.stringify(employees))
-
-
-
-
-
-
-
     })
     
-        
-        // lhFsbOkies: [],
-        // lhFsbRollOverSteam: [],
-        // rhFsbOkies: [],
-        // rhFsbRollOverSteam: [],
-        // lhFscOkies: [],
-        // lhFscRollOverSteam: [],
-        // rhFscOkies: [],
-        // rhFscRollOverSteam: [],
-        // lhCushionInstall: [],
-        // rhCushionInstall: [],
     }
 }
 
