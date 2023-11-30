@@ -1,13 +1,21 @@
-import { optionsButton } from "./button";
 import { refs } from "./refs";
+import OptionsButton from "./button";
+
+export const newOptionButton = new OptionsButton()
+
 
 export function checkLocalStorageFirst() {
     const dataLocalStorageFirst = JSON.parse(localStorage.getItem('first'));
     const dataButtonOptions = JSON.parse(localStorage.getItem('button-counter'));
+    
 
     
+    
     if (dataButtonOptions) {
-        optionsButton.counter = dataButtonOptions.counter;
+        const { counter } = dataButtonOptions;
+
+       
+        newOptionButton.changeCounter(counter);
     }
     if (dataLocalStorageFirst) {
         
@@ -72,10 +80,12 @@ export function getDataLocalStorageFirst() {
 export function checkLocalStorageSecond() {
     const dataLocalStorageSecond = JSON.parse(localStorage.getItem('second'));
     const dataButtonOptions = JSON.parse(localStorage.getItem('button-counter'));
+    
 
     
     if (dataButtonOptions) {
-        optionsButton.counter = dataButtonOptions.counter;
+        const { counter } = dataButtonOptions;
+        newOptionButton.changeCounter(counter);
     }
     if (dataLocalStorageSecond) {
         
@@ -140,10 +150,12 @@ export function getDataLocalStorageSecond() {
 export function checkLocalStorageThird() {
     const dataLocalStorageThird = JSON.parse(localStorage.getItem('third'));
     const dataButtonOptions = JSON.parse(localStorage.getItem('button-counter'));
+    
 
     
     if (dataButtonOptions) {
-        optionsButton.counter = dataButtonOptions.counter;
+        const { counter } = dataButtonOptions;
+        newOptionButton.changeCounter(counter);
     }
     if (dataLocalStorageThird) {
         
@@ -210,10 +222,12 @@ export function getDataLocalStorageThird() {
 export function checkLocalStorageFourth() {
     const dataLocalStorageFourth = JSON.parse(localStorage.getItem('fourth'));
     const dataButtonOptions = JSON.parse(localStorage.getItem('button-counter'));
+    
 
     
     if (dataButtonOptions) {
-        optionsButton.counter = dataButtonOptions.counter;
+        const { counter } = dataButtonOptions;
+        newOptionButton.changeCounter(counter)
     }
     if (dataLocalStorageFourth) {
         
